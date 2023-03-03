@@ -10,11 +10,34 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  background: url(/src/images/planet-earth-svgrepo-com.svg);
+  background-repeat: no-repeat;
+  background-size: 35%;
+  background-color: #e5f4ff;
 }
 
 #search-box {
   font: inherit;
   padding: 8px;
-  max-width: 320px;
+  min-width: 320px;
   margin-bottom: 16px;
+  padding-left: 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+input::placeholder {
+  color: darkgrey;
+  text-align: center;
+}
+
+h1 {
+  color: #383f4a;
+  font-weight: 300;
 }
