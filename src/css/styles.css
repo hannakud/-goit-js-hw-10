@@ -41,3 +41,13 @@ h1 {
   color: #383f4a;
   font-weight: 300;
 }
+.country-list,
+.country-info__list {
+  list-style: none;
+}
+.country-info__item:first-child,
+.country-list__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

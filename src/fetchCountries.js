@@ -1,7 +1,12 @@
-const link = 'https://restcountries.com/v3.1/name/';
-// const peru = 'https://restcountries.com/v3.1/name/peru';
+const link = 'https://restcountries.com/v3.1/name';
+const filters = 'fields=name,capital,population,flags,languages';
 function fetchCountries(name) {
-  return fetch(link)
-    .then(response => response.json)
-    .catch(error => console.error(error));
+  return fetch(`${link}/${name}?${filters}`).then(function (response) {
+    if (response.status === 404) {
+      throw Error('Oops, there is no country with that name');
+    }
+    return response.json();
+  });
 }
+
+export { fetchCountries };
